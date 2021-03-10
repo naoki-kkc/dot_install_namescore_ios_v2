@@ -44,6 +44,7 @@
                     <navigationItem key="navigationItem" title="Name Score" id="ZBl-JQ-Rco"/>
                     <connections>
                         <outlet property="nameText" destination="eOc-WI-hrm" id="gkp-1v-SmR"/>
+                        <outlet property="sendButton" destination="FJ5-BY-f7W" id="wvB-7U-Ed7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

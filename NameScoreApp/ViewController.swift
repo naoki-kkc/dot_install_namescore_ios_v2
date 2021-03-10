@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameText: UITextField!
     
+    @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        nameText.delegate = self
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -29,6 +31,13 @@ class ViewController: UIViewController {
         }
         return true
     }
+    
+    //delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.sendButton.sendActions(for: .touchUpInside)
+        return true
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
